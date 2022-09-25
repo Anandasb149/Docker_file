@@ -4,7 +4,7 @@ pipeline {
         stages {
             stage('Source') {
                 steps {
-                    git url: 'https://github.com/SushmithaNayak23/SpringBuildDockerImage.git'
+                    git url: 'https://github.com/Anandasb149/Docker_file.git'
                 }
             }
             stage('Build') {
