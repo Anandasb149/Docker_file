@@ -5,8 +5,8 @@ pipeline {
             stage('Docker bulid') {
                 steps {
                     script {
-                        sh 'docker compose up -d --no-color --wait'
-                        sh 'docker compose ps'
+                        sh 'docker build -t tag1 .'
+                        sh 'docker images'
                     }
                 }
             }
