@@ -7,14 +7,7 @@ pipeline {
                     git url: 'https://github.com/Anandasb149/Docker_file.git'
                 }
             }
-            stage('Build') {
-                steps {
-                    script {
-                        def mvnHome = tool 'LocalMaven'
-                        bat "${mvnHome}\\bin\\mvn -B verify"
-                    }
-                }
-            }
+           
             
              stage('Build docker image') {
                 steps {
