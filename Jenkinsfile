@@ -7,15 +7,6 @@ pipeline {
                     git url: 'https://github.com/Anandasb149/Docker_file.git'
                 }
             }
-           
-            
-             stage('Build docker image') {
-                steps {
-                    script {
-                        bat 'docker-compose up'
-                    }
-                }
-            }
             
             stage('Docker bulid') {
                 steps {
@@ -25,5 +16,14 @@ pipeline {
                     }
                 }
             }
+      
+             stage('Build docker image') {
+                steps {
+                    script {
+                        bat 'docker-compose up'
+                    }
+                }
+            }
+         
         }
 }
