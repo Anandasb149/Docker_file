@@ -8,6 +8,15 @@ pipeline {
                 }
             }
             
+             stage('Build docker image') {
+                steps {
+                    script {
+                        bat 'docker-compose up'
+                    }
+                }
+            }
+         
+            
             stage('Docker bulid') {
                 steps {
                     script {
@@ -17,13 +26,5 @@ pipeline {
                 }
             }
       
-             stage('Build docker image') {
-                steps {
-                    script {
-                        bat 'docker-compose up'
-                    }
-                }
-            }
-         
         }
 }
