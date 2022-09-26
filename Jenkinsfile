@@ -11,8 +11,8 @@ pipeline {
             stage('Docker bulid') {
                 steps {
                     script {
-                        sh 'docker build -t 1stdoc .'
-                        sh 'docker images'
+                        bat 'docker build -t 1stdoc .'
+                        bat 'docker images'
                     }
                 }
             }
